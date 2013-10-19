@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("HtmlToMarkdown.Net")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Converts Html to Markdown")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Johan Nilsson")]
 [assembly: AssemblyProduct("HtmlToMarkdown.Net")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
