@@ -91,9 +91,9 @@ namespace HtmlToMarkdown.Net
                             nodeStack.Push(localText);
                         }
 
-                        var title = attrs["title"];
-                        var trimmedTitle = title.Value.Trim();
-                        nodeStack.Push("](" + url + (false == string.IsNullOrWhiteSpace(title.Value) ? " \"" + Regex.Replace(trimmedTitle, @"\s+", " ") + "\"" : "") + ")");
+												var title = attrs.ContainsKey("title") && attrs["title"].Value != "" ? attrs["title"].Value : "";
+                        var trimmedTitle = title.Trim();
+                        nodeStack.Push("](" + url + (false == string.IsNullOrWhiteSpace(title) ? " \"" + Regex.Replace(trimmedTitle, @"\s+", " ") + "\"" : "") + ")");
 
                         if (HtmlToMarkdownConverterHelper.startsWith(nodeStack.Peek(), "!"))
                         {
