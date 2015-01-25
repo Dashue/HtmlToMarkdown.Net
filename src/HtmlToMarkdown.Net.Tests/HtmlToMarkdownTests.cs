@@ -352,6 +352,15 @@ namespace HtmlToMarkdown.Net.Tests
             Assert.Equal(expected, _inlineConverter.Convert(html));
         }
 
+				[Fact]
+				public void Should_convert_links_that_have_no_title_attribute_inline()
+				{
+					var html = "<a href=\"http://www.example.com\">Visit Example</a>";
+					var expected = "[Visit Example](http://www.example.com)";
+
+					Assert.Equal(expected, _inlineConverter.Convert(html));
+				}
+
         [Fact]
         public void Should_not_convert_links_if_no_text_to_display()
         {
